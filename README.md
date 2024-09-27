@@ -1,6 +1,6 @@
 <h1>ExpNo 1 :Developing AI Agent with PEAS Description</h1>
-<h3>Name: Saravanan N</h3>
-<h3>Register Number/Staff Id: TSML006</h3>
+<h3>Name: Popuri Sravani</h3>
+<h3>Register Number/Staff Id: 212223240117</h3>
 
 
 <h3>AIM:</h3>
@@ -40,7 +40,8 @@
 <p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
-<h3>Program</h3>
+
+## Program:
 ```
 import random
 class VacuumCleanerAgent:
@@ -90,12 +91,12 @@ agent.perform_action("suck")
 agent.print_status()
 agent.perform_action("nothing")
 agent.print_status()
-
 ```
+
 ## Output:
 ![WhatsApp Image 2024-09-27 at 08 30 59_04a1911d](https://github.com/user-attachments/assets/c33c732f-1755-4dd3-bc0b-052c1a96489c)
 
 
 
-##Result:
+## Result:
 The PEAS description for the given ai problem has been successfully developed using an AI agent.
