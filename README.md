@@ -40,3 +40,62 @@
 <p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
+<h3>Program</h3>
+```
+import random
+class VacuumCleanerAgent:
+    def _init_(self):
+        self.location = "A"  
+        self.dirt_status = {"A": True, "B": True}  
+        self.performance=0
+    def move_left(self): 
+        if self.location == "B":
+            self.location = "A"
+    def move_right(self):
+        if self.location == "A":
+            self.location = "B"
+    def suck_dirt(self): 
+        if self.dirt_status[self.location]:
+            self.dirt_status[self.location] = False
+            print(f"Sucked dirt in location {self.location}")
+    def do_nothing(self): 
+        pass
+    def perform_action(self, action): 
+        if action == "left":
+            self.performance=self.performance-1
+            self.move_left()
+        elif action == "right":
+            self.performance=self.performance-1
+            self.move_right()
+        elif action == "suck":
+            self.performance=self.performance+10
+            self.suck_dirt()
+        elif action == "nothing":
+            self.do_nothing()
+        else:
+            print("Invalid action")
+    def print_status(self): 
+        print(f"Location: {self.location}, Dirt Status: {self.dirt_status}, ",end="")
+        print(f"Perfomance Measure: {self.performance}")
+# Example usage:
+agent = VacuumCleanerAgent()
+# Move the agent, suck dirt, and do nothing
+agent.perform_action("left")
+agent.print_status()
+agent.perform_action("suck")
+agent.print_status()
+agent.perform_action("right")
+agent.print_status()
+agent.perform_action("suck")
+agent.print_status()
+agent.perform_action("nothing")
+agent.print_status()
+
+```
+## Output:
+![WhatsApp Image 2024-09-27 at 08 30 59_04a1911d](https://github.com/user-attachments/assets/c33c732f-1755-4dd3-bc0b-052c1a96489c)
+
+
+
+##Result:
+The PEAS description for the given ai problem has been successfully developed using an AI agent.
